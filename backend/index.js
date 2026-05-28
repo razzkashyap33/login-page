@@ -15,13 +15,17 @@ app.get('/ping', (req, res) => {
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
     credentials: true
 }));
 app.use('/auth', AuthRouter);
 app.use('/products', ProductRouter);
 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`)
-})
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on ${PORT}`)
+    })
+}
+
+module.exports = app;

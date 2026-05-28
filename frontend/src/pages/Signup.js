@@ -23,7 +23,8 @@ function Signup() {
         }
         setIsLoading(true);
         try {
-            const url = `http://localhost:8080/auth/signup`;
+            const API_URL = process.env.REACT_APP_API_URL || '';
+            const url = `${API_URL}/auth/signup`;
             const response = await axios.post(url, signupInfo, {
                 headers: { 'Content-Type': 'application/json' }
             });

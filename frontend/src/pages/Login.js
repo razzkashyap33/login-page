@@ -23,8 +23,9 @@ function Login() {
         }
         setIsLoading(true);
         try {
-            // Updated to local dev backend; in prod, use env variable
-            const url = `http://localhost:8080/auth/login`;
+            // Updated to local dev backend; in prod, it will use relative path or env variable
+            const API_URL = process.env.REACT_APP_API_URL || '';
+            const url = `${API_URL}/auth/login`;
             const response = await axios.post(url, loginInfo, {
                 withCredentials: true // Important for HttpOnly cookies
             });

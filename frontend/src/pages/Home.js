@@ -47,14 +47,14 @@ function Home() {
                     <h1 className="text-xl font-bold text-purple-600 dark:text-purple-400">Welcome</h1>
                 </div>
                 <nav className="flex-1 p-4 space-y-2">
-                    <a href="#" className="flex items-center px-4 py-3 text-sm font-medium rounded-lg bg-purple-50 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300">
+                    <button type="button" className="w-full text-left flex items-center px-4 py-3 text-sm font-medium rounded-lg bg-purple-50 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300">
                         <LayoutDashboard className="w-5 h-5 mr-3" />
                         Dashboard
-                    </a>
-                    <a href="#" className="flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700/50 transition-colors">
+                    </button>
+                    <button type="button" className="w-full text-left flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700/50 transition-colors">
                         <Settings className="w-5 h-5 mr-3" />
                         Settings
-                    </a>
+                    </button>
                 </nav>
                 <div className="p-4 border-t border-gray-200 dark:border-gray-700">
                     <button 
